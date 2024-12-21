@@ -1,0 +1,59 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+*.out
+
+# Temporary files
+*.tmp
+*.temp
+
+# Maven specific
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.settings/
+.classpath
+.project
+dependency-reduced-pom.xml
+release.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Selenium WebDriver binaries (optional, depends on project setup)
+chromedriver
+geckodriver
+*.exe
+
+# Test output files
+surefire-reports/
+test-output/
+
+# Credentials or config
+*.properties
+*.env
