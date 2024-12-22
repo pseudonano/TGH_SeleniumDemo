@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SelDemo{
@@ -14,9 +15,11 @@ public class SelDemo{
 //		WebDriver driver = new ChromeDriver();
 		
 		
-		System.setProperty("firefox.gecko.driver", "/home/tegpam/applications/BrowserDriver/FirefoxDriver/geckodriver");
-		WebDriver driver = new FirefoxDriver();
+//		System.setProperty("firefox.gecko.driver", "/home/tegpam/applications/BrowserDriver/FirefoxDriver/geckodriver");
+//		WebDriver driver = new FirefoxDriver();
 		
+		System.setProperty("firefox.edge.driver", "/home/tegpam/applications/BrowserDriver/EdgeDriver/msedgedriver");		
+		WebDriver driver = new EdgeDriver();
 		
 		driver.get("https://google.com");
 		String x =driver.getTitle();
