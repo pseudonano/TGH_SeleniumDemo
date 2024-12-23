@@ -3,32 +3,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import seleniumDemo.SeleniumDemo;
+
 public class SelDemo{
 
 	public static void main(String[] args) {
-		// invoke BrowserDriver
-		// the object are WebDriver instead of ChromeDriver because we need to implement it on other browser as well
-		// we can let Selenium Manager(access web-download driver-open) or we can set using System.setProperty to invoke the browser(download manually)
-
-//		System.setProperty("webdriver.chrome.driver", "/home/tegpam/applications/BrowserDriver/ChromeDriver/chromedriver");
-//		ChromeDriverService service = new ChromeDriverService.Builder().usingPort(9515).build();
-//		WebDriver driver = new ChromeDriver();
+		WebDriver driver = null;
+		try {
+			driver = DriverSelector.getDriver("edge");
+			SeleniumDemo.runDemo(driver);
+		} finally {
+			if (driver != null) {
+				driver.quit();
+			}
+		}
 		
-		
-//		System.setProperty("firefox.gecko.driver", "/home/tegpam/applications/BrowserDriver/FirefoxDriver/geckodriver");
-//		WebDriver driver = new FirefoxDriver();
-		
-		System.setProperty("firefox.edge.driver", "/home/tegpam/applications/BrowserDriver/EdgeDriver/msedgedriver");		
-		WebDriver driver = new EdgeDriver();
-		
-		driver.get("https://google.com");
-		String x =driver.getTitle();
-		System.out.println(x);
-		String y = driver.getCurrentUrl();
-		System.out.println(y);
-		driver.quit();
-		
-
 	}
 
 }
