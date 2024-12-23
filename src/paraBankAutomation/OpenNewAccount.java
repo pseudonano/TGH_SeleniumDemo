@@ -23,7 +23,7 @@ public class OpenNewAccount {
 	public static void menuOpenNewAccount(WebDriver driver) {
 		driver.findElement(OPENNEWACCOUNT_LINK).click();
 		Select dropdownAccountType = new Select(driver.findElement(ACCOUNTTYPE_DROPDOWN));
-		dropdownAccountType.selectByIndex(1);
+		dropdownAccountType.selectByVisibleText("SAVINGS");
 		Select dropdownFromAccountId = new Select(driver.findElement(FROMACCOUNTID_DROPDOWN));
 		dropdownFromAccountId.selectByIndex(0);
 		driver.findElement(OPENNEWACCOUNT_BUTTON).click();
