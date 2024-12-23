@@ -1,9 +1,6 @@
-import java.util.UUID;
-
 import org.openqa.selenium.WebDriver;
 
-
-import paraBankAutomation.Register;
+import paraBankAutomation.OpenNewAccount;
 
 
 public class SelDemo{
@@ -15,7 +12,8 @@ public class SelDemo{
 			driver = DriverSelector.getDriver("chrome");
 //			SeleniumDemo.runDemo(driver);
 //			LoginLogout.runParaBankAutomation(driver);
-			Register.runRegister(driver);
+//			Register.runRegister(driver);
+			OpenNewAccount.runOpenNewAccount(driver);
 		} finally {
 			if (driver != null) {
 				driver.quit();

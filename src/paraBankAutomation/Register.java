@@ -52,11 +52,18 @@ private static void fillInfo(WebDriver driver,String stringVal, String intVal) {
 	driver.findElement(CONFIRM_FIELD).sendKeys(currUsername);
 	System.out.println(" > Successfully register with username: "+currUsername);
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	
 }
 
 private static void clickSubmit(WebDriver driver) {
 	driver.findElement(REGISTER_BUTTON).click();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	try {
+		Thread.sleep(Duration.ofSeconds(5));
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 
 }
