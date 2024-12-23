@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver;
 
 import paraBankAutomation.BillPay;
+import paraBankAutomation.FindTransactions;
 import paraBankAutomation.OpenNewAccount;
 import paraBankAutomation.Register;
 import paraBankAutomation.TransferFunds;
@@ -18,7 +19,8 @@ public class SelDemo{
 //			Register.runRegister(driver);
 //			OpenNewAccount.runOpenNewAccount(driver);
 //			TransferFunds.runTransferFunds(driver);
-			BillPay.runBillPay(driver);
+//			BillPay.runBillPay(driver);
+			FindTransactions.runFindTransactions(driver);
 		} finally {
 			if (driver != null) {
 				driver.quit();
