@@ -3,6 +3,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import paraBankAutomation.ParaBankAutomation;
 import seleniumDemo.SeleniumDemo;
 
 public class SelDemo{
@@ -11,7 +12,8 @@ public class SelDemo{
 		WebDriver driver = null;
 		try {
 			driver = DriverSelector.getDriver("edge");
-			SeleniumDemo.runDemo(driver);
+//			SeleniumDemo.runDemo(driver);
+			ParaBankAutomation.runParaBankAutomation(driver);
 		} finally {
 			if (driver != null) {
 				driver.quit();
