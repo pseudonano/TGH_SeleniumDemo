@@ -27,7 +27,7 @@ public static WebDriver getDriver(String browser) {
 		throw new IllegalArgumentException("unsuported browser: "+browser);
 		
 	}
-	//set behaviour
+	//set browser behaviour
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	driver.manage().window().maximize();
 	

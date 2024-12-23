@@ -1,19 +1,21 @@
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import java.util.UUID;
 
-import paraBankAutomation.ParaBankAutomation;
-import seleniumDemo.SeleniumDemo;
+import org.openqa.selenium.WebDriver;
+
+
+import paraBankAutomation.Register;
+
 
 public class SelDemo{
+
 
 	public static void main(String[] args) {
 		WebDriver driver = null;
 		try {
-			driver = DriverSelector.getDriver("edge");
+			driver = DriverSelector.getDriver("chrome");
 //			SeleniumDemo.runDemo(driver);
-			ParaBankAutomation.runParaBankAutomation(driver);
+//			LoginLogout.runParaBankAutomation(driver);
+			Register.runRegister(driver);
 		} finally {
 			if (driver != null) {
 				driver.quit();
