@@ -30,7 +30,7 @@ public class UpdateContactInfo {
 		menuUpdateContactInfo(driver);
 		fillUpdateContactInfo(driver);
 		clickUpdateProfile(driver);
-		Assert.assertEquals(driver.findElement(PROFILEUPDATED_HEADER).getText(), "Profile Updated");
+
 		LoginLogout.logout(driver);
 	}
 	
@@ -49,25 +49,23 @@ public class UpdateContactInfo {
 		fillHelper(driver,ZIPCODE_FIELD, "updated ");
 		fillHelper(driver,PHONENUMBER_FIELD, "updated ");
 
-		try {
-			Thread.sleep(Duration.ofSeconds(10));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(Duration.ofSeconds(10));
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 	
 	public static void clickUpdateProfile(WebDriver driver) {
 		driver.findElement(UPDATEPROFILE_BUTTON).click();
-
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		try {
-			Thread.sleep(Duration.ofSeconds(10));
+			Thread.sleep(Duration.ofSeconds(15));
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Assert.assertEquals(driver.findElement(PROFILEUPDATED_HEADER).getText(), "Profile Updated");
 	}
 	
 	public static void fillHelper(WebDriver driver, By field, String updatedVal) {

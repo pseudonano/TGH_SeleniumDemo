@@ -20,12 +20,12 @@ public static void runParaBankAutomation(WebDriver driver) {
 public static void loadPage(WebDriver driver) {
 	driver.get(BASE_URL);
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	try {
-		Thread.sleep(Duration.ofSeconds(5));
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+//	try {
+//		Thread.sleep(Duration.ofSeconds(5));
+//	} catch (InterruptedException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	}
 }
 
 public static void login(WebDriver driver, String username, String password) {
@@ -33,23 +33,23 @@ public static void login(WebDriver driver, String username, String password) {
 	driver.findElement(PASSWORD_FIELD).sendKeys(password);
 	driver.findElement(BUTTON_LOGIN).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	try {
-		Thread.sleep(Duration.ofSeconds(5));
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+//	try {
+//		Thread.sleep(Duration.ofSeconds(5));
+//	} catch (InterruptedException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	}
 }
 
 public static void logout(WebDriver driver) {
 	driver.findElement(LOGOUT_LINK).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	try {
-		Thread.sleep(Duration.ofSeconds(5));
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+//	try {
+//		Thread.sleep(Duration.ofSeconds(5));
+//	} catch (InterruptedException e) {
+//		// TODO Auto-generated catch block
+//		e.printStackTrace();
+//	}
 }
 
 }

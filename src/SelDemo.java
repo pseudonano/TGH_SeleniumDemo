@@ -18,6 +18,7 @@ public class SelDemo{
 		WebDriver driver = null;
 		try {
 			driver = DriverSelector.getDriver("chrome");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 //			SeleniumDemo.runDemo(driver);
 //			LoginLogout.runParaBankAutomation(driver);
 //			Register.runRegister(driver);
