@@ -1,10 +1,14 @@
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 
 import paraBankAutomation.BillPay;
 import paraBankAutomation.FindTransactions;
+import paraBankAutomation.LoginLogout;
 import paraBankAutomation.OpenNewAccount;
 import paraBankAutomation.Register;
 import paraBankAutomation.TransferFunds;
+import paraBankAutomation.UpdateContactInfo;
 
 
 public class SelDemo{
@@ -20,7 +24,8 @@ public class SelDemo{
 //			OpenNewAccount.runOpenNewAccount(driver);
 //			TransferFunds.runTransferFunds(driver);
 //			BillPay.runBillPay(driver);
-			FindTransactions.runFindTransactions(driver);
+//			FindTransactions.runFindTransactions(driver);
+			UpdateContactInfo.runUpdateContactInfo(driver);
 		} finally {
 			if (driver != null) {
 				driver.quit();

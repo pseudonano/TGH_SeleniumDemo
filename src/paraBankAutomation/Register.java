@@ -32,12 +32,12 @@ public static void runRegister(WebDriver driver) {
 	LoginLogout.logout(driver);
 }
 
-private static void clickRegister(WebDriver driver) {
+public static void clickRegister(WebDriver driver) {
 	driver.findElement(REGISTER_LINK).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 }
 
-private static void fillInfo(WebDriver driver,String stringVal, String intVal) {
+public static void fillInfo(WebDriver driver,String stringVal, String intVal) {
 	String currUsername = uniqueUsername;
 	driver.findElement(FIRSTNAME_FIELD).sendKeys(stringVal);
 	driver.findElement(LASTNAME_FIELD).sendKeys(stringVal);
@@ -55,7 +55,7 @@ private static void fillInfo(WebDriver driver,String stringVal, String intVal) {
 	
 }
 
-private static void clickSubmit(WebDriver driver) {
+public static void clickSubmit(WebDriver driver) {
 	driver.findElement(REGISTER_BUTTON).click();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	try {
