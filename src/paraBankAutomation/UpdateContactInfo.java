@@ -49,12 +49,12 @@ public class UpdateContactInfo {
 		fillHelper(driver,ZIPCODE_FIELD, "updated ");
 		fillHelper(driver,PHONENUMBER_FIELD, "updated ");
 
-//		try {
-//			Thread.sleep(Duration.ofSeconds(10));
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			Thread.sleep(Duration.ofSeconds(10));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static void clickUpdateProfile(WebDriver driver) {
@@ -69,6 +69,7 @@ public class UpdateContactInfo {
 	}
 	
 	public static void fillHelper(WebDriver driver, By field, String updatedVal) {
+		driver.findElement(field).clear();
 		driver.findElement(field).sendKeys(updatedVal);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}

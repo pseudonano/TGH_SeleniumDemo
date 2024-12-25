@@ -10,11 +10,11 @@ public class LoginLogout {
 	private static final By USERNAME_FIELAD = By.xpath("//input[@name='username']");
 	private static final By PASSWORD_FIELD = By.xpath("//input[@name='password']");
 	private static final By BUTTON_LOGIN = By.xpath("//input[@value='Log In']");
-	private static final By LOGOUT_LINK = By.xpath("//a[normalize-space()='Log Out']");
+	private static final By LOGOUT_LINK = By.cssSelector("a[href='logout.htm']");
 	
 public static void runParaBankAutomation(WebDriver driver) {
 	loadPage(driver);
-	login(driver,"s","s");
+	login(driver,"user_1aea","user_1aea");
 	logout(driver);
 }
 public static void loadPage(WebDriver driver) {
@@ -32,13 +32,13 @@ public static void login(WebDriver driver, String username, String password) {
 	driver.findElement(USERNAME_FIELAD).sendKeys(username);
 	driver.findElement(PASSWORD_FIELD).sendKeys(password);
 	driver.findElement(BUTTON_LOGIN).click();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//	try {
-//		Thread.sleep(Duration.ofSeconds(5));
-//	} catch (InterruptedException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//	}
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	try {
+		Thread.sleep(Duration.ofSeconds(15));
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 
 public static void logout(WebDriver driver) {

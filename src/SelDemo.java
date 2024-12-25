@@ -19,14 +19,15 @@ public class SelDemo{
 		try {
 			driver = DriverSelector.getDriver("chrome");
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			
 //			SeleniumDemo.runDemo(driver);
-//			LoginLogout.runParaBankAutomation(driver);
+			LoginLogout.runParaBankAutomation(driver);
 //			Register.runRegister(driver);
 //			OpenNewAccount.runOpenNewAccount(driver);
 //			TransferFunds.runTransferFunds(driver);
 //			BillPay.runBillPay(driver);
 //			FindTransactions.runFindTransactions(driver);
-			UpdateContactInfo.runUpdateContactInfo(driver);
+//			UpdateContactInfo.runUpdateContactInfo(driver);
 		} finally {
 			if (driver != null) {
 				driver.quit();
