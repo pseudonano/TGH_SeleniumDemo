@@ -3,6 +3,7 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 
 import seleniumClickJetDemo.SeleniumStaticDropdown;
+import seleniumClickJetDemo.SeleniumUpdatedDropdown;
 
 
 public class ClickJetRunner {
@@ -12,8 +13,9 @@ public class ClickJetRunner {
 		try {
 			driver = DriverSelector.getDriver("chrome");
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			SeleniumStaticDropdown.runSeleniumStaticDropdown(driver);
 			
+//			SeleniumStaticDropdown.runSeleniumStaticDropdown(driver);
+			SeleniumUpdatedDropdown.runSeleniumUpdateDropdown(driver);
 			
 			
 		} finally {
