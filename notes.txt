@@ -1,0 +1,5 @@
+To run on selenium grid, you need to run these command:
+-enable hub
+>java -jar selenium-server-4.27.0.jar hub
+-create node-config on selenium server folder and adding node to the hub
+>java -jar selenium-server-4.27.0.jar node --config node-config.json
