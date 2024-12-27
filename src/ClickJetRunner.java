@@ -9,7 +9,7 @@ import seleniumClickJetDemo.SeleniumUpdatedDropdown;
 
 public class ClickJetRunner {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = null;
 		try {
 			driver = DriverSelector.getDriver("chrome");
