@@ -12,16 +12,16 @@ public class SeleniumDynamicDropdown {
 	
 	public static void runSeleniumDynamicDropdown(WebDriver driver) {
 		driver.get(SeleniumStaticDropdown.BASE_URL);
-		try {
-			Thread.sleep(Duration.ofSeconds(5));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(Duration.ofSeconds(5));
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		driver.findElement(FROM_DROPDOWN).click();
 		driver.findElement(SELECTFROM_VALUE).click();
 		try {
-			Thread.sleep(Duration.ofSeconds(15));
+			Thread.sleep(Duration.ofSeconds(3));
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -13,7 +13,6 @@ public class ClickJetRunner {
 		WebDriver driver = null;
 		try {
 			driver = DriverSelector.getDriver("chrome");
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			
 //			SeleniumStaticDropdown.runSeleniumStaticDropdown(driver);
 //			SeleniumUpdatedDropdown.runSeleniumUpdateDropdown(driver);
